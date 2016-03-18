@@ -4,9 +4,9 @@
 
 <table class="table table-striped">
     <tr>
-        <th>Symbol</th>
-        <th>Name</th>
-        <th>Price</th>
+        <th style ="color: #0091FF;">Symbol</th>
+        <th style ="color: #0091FF;">Name</th>
+        <th style ="color: #0091FF;">Price</th>
     </tr>
     <tr>
         <td><?= $values["symbol"] ?></td>
