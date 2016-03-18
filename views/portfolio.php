@@ -6,11 +6,11 @@
 
     <thead>
         <tr>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Shares</th>
-            <th>Price</th>
-            <th>Total</th>
+            <th style ="color: #0091FF;">Symbol</th>
+            <th style ="color: #0091FF;">Name</th>
+            <th style ="color: #0091FF;">Shares</th>
+            <th style ="color: #0091FF;">Price</th>
+            <th style ="color: #0091FF;">Total</th>
         </tr>
     </thead>
 
