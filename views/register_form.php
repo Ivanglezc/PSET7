@@ -1,5 +1,12 @@
+<body style="background-color:#bfbfbf">
 <form action="register.php" method="post">
     <fieldset>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="firstname" placeholder="First Name" type="text"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="lastname" placeholder="Last Name" type="text"/>
+        </div>
         <div class="form-group">
             <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
         </div>
