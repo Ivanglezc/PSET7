@@ -1,3 +1,4 @@
+<body style="background-color:#bfbfbf">
 <form action="login.php" method="post">
     <fieldset>
         <div class="form-group">

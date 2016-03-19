@@ -3,8 +3,10 @@
 <h1>
     <?php
     $firstname= CS50::query("SELECT firstname FROM users WHERE id = ?", $_SESSION["id"]);
+    $lastname= CS50::query("SELECT lastname FROM users WHERE id = ?", $_SESSION["id"]);
     $firstname= $firstname[0]["firstname"];
-    print("Hi, ". ($firstname));
+    $lastname= $lastname[0]["lastname"];
+    print("Hi, ". ($firstname) ." " . ($lastname) );
     ?>
 </h1>
 <h1>You have: </h1> 
