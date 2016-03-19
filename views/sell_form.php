@@ -1,3 +1,5 @@
+
+<body style="background-color:#bfbfbf">
 <form action="sell.php" method="post">
     <fieldset>
         <div class="form-group">
@@ -10,10 +12,15 @@
                 }
                 ?>
             </select>
+            </select>
         </div>
         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shareamount" placeholder="No. of Shares" type="int"/>
+        </div>        
+        <div class="form-group">
             <button class="btn btn-default" type="submit">
-                Sell
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                 Sell
             </button>
         </div>
     </fieldset>
