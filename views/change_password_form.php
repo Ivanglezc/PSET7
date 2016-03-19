@@ -1,5 +1,6 @@
 <?php
 ?>
+<body style="background-color:#bfbfbf">
 <form action="change_password.php" method="post">
     <fieldset>
         <div class="form-group">
