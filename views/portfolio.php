@@ -1,5 +1,5 @@
 <body style="background-color:#bfbfbf">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EFS3T321VUY" frameborder="0" allowfullscreen></iframe>
+<iframe style= "border-radius:15px 15px 15px 15px; border: 20px inset #FFFFFF;" width="560" height="315" src="https://www.youtube.com/embed/EFS3T321VUY" frameborder="0" allowfullscreen></iframe>
 <h1>
     <?php
     $firstname= CS50::query("SELECT firstname FROM users WHERE id = ?", $_SESSION["id"]);
