@@ -4,6 +4,7 @@
     require("../includes/config.php");   
     if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
+    $symbol_name = !empty($_GET["symbol"]) ? $_GET["symbol"] : "";
     // render
      render("buy_form.php", ["title" => "Buy"]);
     }
@@ -28,7 +29,7 @@
         
         $stock = lookup($_POST["symbol"]);
         
-       $cost = $stock["price"] * $_POST["shares"];
+        $cost = $stock["price"] * $_POST["shares"];
         
         $cash_rows = CS50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
         $cash = $cash_rows[0]["cash"];
@@ -44,7 +45,7 @@
             CS50::query("INSERT INTO portfolio (user_id, symbol, shares) VALUES(?, ?, ?) 
                 ON DUPLICATE KEY UPDATE shares = shares + VALUES(shares)", $_SESSION["id"], $_POST["symbol"], $_POST["shares"]);
             CS50::query("UPDATE users SET cash = cash - ? WHERE id = ?", $cost, $_SESSION["id"]);
-            CS50::query("INSERT INTO history (user_id, transaction, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", $_SESSION["id"], $type, $_POST["symbol"], $_POST["shares"], $stock["price"]);
+            CS50::query("INSERT INTO history (user_id, transaction, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", $_SESSION["id"], $type, $_POST["symbol"], $_POST["shares"], $cost);
 
             redirect("/");    
         }
