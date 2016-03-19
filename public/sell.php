@@ -54,11 +54,3 @@
         redirect("/");    
     }    
 ?>     
-        CS50::query("UPDATE users SET cash = (cash + ".profit.") WHERE id = ?", $_SESSION["id"]);
-        $rows = CS50::query("DELETE FROM portfolio WHERE user_id = ? AND symbol = ?", $_SESSION["id"],$stock["symbol"]);
-        $type = 'Sell';
-        CS50::query("INSERT INTO history (user_id, transaction, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", $_SESSION["id"], $type, $_POST["symbol"], $_POST["shares"], $value);
-
-        redirect("/");
-    }
-?>
