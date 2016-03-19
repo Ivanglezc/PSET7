@@ -42,11 +42,13 @@
         
         else
         {
+            //Queries
             CS50::query("INSERT INTO portfolio (user_id, symbol, shares) VALUES(?, ?, ?) 
                 ON DUPLICATE KEY UPDATE shares = shares + VALUES(shares)", $_SESSION["id"], $_POST["symbol"], $_POST["shares"]);
             CS50::query("UPDATE users SET cash = cash - ? WHERE id = ?", $cost, $_SESSION["id"]);
             CS50::query("INSERT INTO history (user_id, transaction, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", $_SESSION["id"], $type, $_POST["symbol"], $_POST["shares"], $cost);
-
+           
+            // Go Back to Main Page
             redirect("/");    
         }
     }
