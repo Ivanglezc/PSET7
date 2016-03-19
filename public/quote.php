@@ -29,6 +29,7 @@
             // if stock was valid render show_quote with needed information
             else
             {
+                //Render to show quote
                 render("show_quote.php", ["title" => "Stock Quote", 
                                              "symbol" => $stock["symbol"],
                                              "name" => $stock["name"],
