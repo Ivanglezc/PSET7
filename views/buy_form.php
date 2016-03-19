@@ -1,3 +1,4 @@
+<body style="background-color:#bfbfbf">
 <form action="buy.php" method="post">
     <fieldset>
         <div class="form-group">
@@ -12,6 +13,7 @@
                 Buy
             </button>
         </div>
+        </style>
     </fieldset>
 </form>
 
