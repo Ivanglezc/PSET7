@@ -1,3 +1,5 @@
+<body style="background-color:#bfbfbf">
+
 <table class="table table-striped">
 
     <thead>
